@@ -82,7 +82,7 @@ const Checkout = () => {
                   Accept
                 </button>
                 <button
-                  className="btn bg-light"
+                  className="btn bg-light text-danger"
                   onClick={() => context.setIsClearCart(false)}
                 >
                   Cancel

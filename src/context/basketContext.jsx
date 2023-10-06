@@ -10,8 +10,6 @@ export const BasketProvider = ({ children }) => {
 
   //*AddToBasket
   const addToBasket = (product) => {
-    //setBasket([...basket, product]);
-
     const found = basket.find((item) => item.id === product.id);
     if (found) {
       const updated = { ...found, amount: found.amount + 1 };
@@ -21,6 +19,7 @@ export const BasketProvider = ({ children }) => {
       setBasket(updatedProduct);
     } else {
       setBasket(basket.concat({ ...product, amount: 1 }));
+      //? setBasket([...basket, { ...product, amount: 1 }]);
     }
     //console.log(basket);
   };
